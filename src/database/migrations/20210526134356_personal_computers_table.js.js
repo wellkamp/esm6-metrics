@@ -6,7 +6,7 @@ exports.up = knex => {
       table.string("core", 255).notNullable()
       table.string("gpu", 255).notNullable()
       table.string("memory", 255).notNullable()
-      table.integer("user_id").unique().unsigned()
+      table.integer("user_id").unsigned()
       table.foreign("user_id").references("users.id")
       table.timestamps(true, true);
     });

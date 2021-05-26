@@ -8,5 +8,6 @@ const router = new Router()
 router.get('/users', UserController.index)
 router.get('/users/:id', UserController.show)
 router.post('/users', UserValidate.create(), UserController.create)
+router.post('/users/login', UserController.login)
 
 export default router.routes()
